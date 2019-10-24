@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.gifhary.vehicleroutingsystem">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/API_KEY" />
+
+        <activity
+            android:name=".WelcomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/login"
+            android:screenOrientation="portrait"
+            android:theme="@style/LoginAndRegister" />
+        <activity
+            android:name=".RegisterActivity"
+            android:label="@string/register"
+            android:screenOrientation="portrait"
+            android:theme="@style/LoginAndRegister" />
+        <activity
+            android:name=".TripActivity"
+            android:label="@string/title_activity_trip"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".NewTripActivity"
+            android:label="@string/new_trip"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".StartPointActivity"
+            android:label="@string/start_point"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".StartOnMapActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".DestOnMapActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".RouteActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ManageTripActivity"
+            android:label="@string/manage_trip"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".EditTripActivity"
+            android:label="@string/editTrip"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RejectedTripActivity"
+            android:label="@string/rejected_trip"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="REJECTED_TRIP_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".RTripDetailActivity"
+            android:label="@string/rejected_trip"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".TrackActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+    </application>
+
+</manifest>

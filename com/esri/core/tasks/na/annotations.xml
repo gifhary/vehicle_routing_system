@@ -1,0 +1,5 @@
+<root>
+    <item name='com.esri.core.tasks.na.RouteTask'>
+        <annotation name='java.lang.Deprecated' />
+    </item>
+</root>

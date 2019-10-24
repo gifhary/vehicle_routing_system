@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/almostWhite"
+    tools:context=".NewTripActivity">
+
+    <EditText
+        android:id="@+id/tripNameEditTV"
+        android:layout_width="211dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:hint="@string/trip_name"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.22000003" />
+
+    <EditText
+        android:id="@+id/startPointEditTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:focusable="false"
+        android:hint="@string/start_point"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tripNameEditTV" />
+
+    <EditText
+        android:id="@+id/destinationEditTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:focusable="false"
+        android:hint="@string/destination"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startPointEditTV" />
+
+    <Button
+        android:id="@+id/findRouteBtn"
+        android:layout_width="175dp"
+        android:layout_height="77dp"
+        android:layout_marginEnd="3dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:onClick="findRoute"
+        android:text="@string/find_route"
+        android:textColor="@color/common_google_signin_btn_text_dark_default"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/saveBtn"
+        android:layout_width="175dp"
+        android:layout_height="77dp"
+        android:layout_marginStart="3dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:onClick="saveBtn"
+        android:text="@string/save"
+        android:textColor="@color/common_google_signin_btn_text_dark_default"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/startPointImage"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/startPointEditTV"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/startPointEditTV"
+        app:srcCompat="@android:drawable/ic_menu_mylocation"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/destinationImage"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/destinationEditTv"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/destinationEditTv"
+        app:srcCompat="@drawable/ic_location_on_black_24dp"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/dot0"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="19dp"
+        app:layout_constraintEnd_toStartOf="@+id/startPointEditTV"
+        app:layout_constraintTop_toBottomOf="@+id/startPointImage"
+        app:srcCompat="@android:drawable/presence_invisible"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/dot1"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginBottom="3dp"
+        app:layout_constraintBottom_toTopOf="@+id/destinationImage"
+        app:layout_constraintEnd_toStartOf="@+id/destinationEditTv"
+        app:srcCompat="@android:drawable/presence_invisible"
+        tools:ignore="ContentDescription" />
+
+    <ProgressBar
+        android:id="@+id/saving"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:visibility="invisible"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/destinationEditTv" />
+
+</android.support.constraint.ConstraintLayout>
